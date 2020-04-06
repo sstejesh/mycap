@@ -1,5 +1,7 @@
 list1=[12,-7,5,64,-14]
 list2=[12,14,-95,3]
+output1=[]
+output2=[]
 a=len(list1)
 b=len(list2)
 i=0
