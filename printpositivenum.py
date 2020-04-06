@@ -9,7 +9,7 @@ while i<=a:
   end  
 i+=1
 end
-print(op1)
+print(output1)
 i=0
 while i<=b:
   if list2[i]>0:
@@ -17,6 +17,6 @@ while i<=b:
   end  
 i+=1
 end
-print(op2)
+print(output2)
 
   
