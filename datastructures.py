@@ -21,7 +21,7 @@ print(tuple[1])
 print(tuple[2])
 print(tuple[3])
 print(tuple[4])
-dict={"kohli":"batsman","dhoni":"captain","bumrah":"bowler}
+dict={"kohli":"batsman","dhoni":"captain","bumrah":"bowler"}
 print("after deleting some elements")
 del dict(bumrah)
 del dict(dhoni)
