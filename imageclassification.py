@@ -27,7 +27,7 @@ s=y_test.values
 count = 0
 for i in range(len(pred)):
   if pred(i) == s(i)
-     count+=1
+     count += 1
  l=len(pred)
  # accuracy level
  accuracy = count/l
