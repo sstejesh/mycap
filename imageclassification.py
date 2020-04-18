@@ -6,7 +6,7 @@ from sklearn.cross_validation import train_test_split
 %matplotlib inline
 # using pandas to store database stored in same folder
 data=pd.read_csv('mnist.csv')
-# viewing column heads
+# viewing column head
 data.head()
 # rashaping the extracted data into a reasonable size
 a=a.reshape(28,28),astype('uint8')
