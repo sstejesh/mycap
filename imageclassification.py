@@ -23,8 +23,8 @@ rf.fit(x_train, y_train)
 # prediction on test data
 pred rf.predict(x_test)
 s=y_test.values
-# calculation of no. of correctly predictrd values
-count=0
+# calculation of no. of correctly predicted values
+count = 0
 for i in range(len(pred)):
   if pred(i) == s(i)
      count+=1
