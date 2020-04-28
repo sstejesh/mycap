@@ -61,6 +61,29 @@ X_train,X_validation,Y_train,Y_validation = train_test_split(X, Y, test_size=0.2
 #building models
 model = []
 models.append(('LR",LogisticRegression(solver='liblinear', multi_class='ovr')))
+models.append(('LDA',LinearDiscriminantAnalysis()))
+models.append(('KNN',KNeighborsClassifier()))
+models.append(('NB',GaussianNB()))
+models.append(('SVM',SVC(gamma='auto)))
+#evaluate the created models
+results = []
+names = []
+for name, model in models:
+  kfold=StratifiedKFold(n_splits=10, random_state=1)
+  cv_results=cross_val_score(model,X_train,Y_train,cv=kfold,scoring='accuracy')
+  results.append(cv_results)
+  names.append(name)
+  print('%s:%f(%f)' % (name,cv_results.mean(),cv_results.std()))
+  
+#compare the models
+pyplot.boxplot(results,label=names)
+pyplot.title('Algorithm Comparison')
+pyplot.show()
+
+#make predictions on svm
+model=SVC(gamma='auto')
+model.fit(X_train,Y_train)
+predictions=model.predict(X_validation)
 
 
 
